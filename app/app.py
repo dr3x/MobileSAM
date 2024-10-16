@@ -102,6 +102,9 @@ def segment_with_points(
 ):
     global global_points
     global global_point_label
+    
+    if len(global_points) == 0:
+        return segment_everything(image), image
 
     input_size = int(input_size)
     w, h = image.size
